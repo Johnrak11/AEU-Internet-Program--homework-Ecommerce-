@@ -1,0 +1,279 @@
+/* Define color variables */
+:root {
+    --font-primary: #333;
+    --font-secondary: #f05a69;
+    --background-light: #f9f9f9;
+    --background-dark: #333;
+    --background-sale: #f9848e;
+    --text-white: #fff;
+    --border-color: #ddd;
+    --star-rating: #ffca08;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+/* ============== Nav bar side  =========*/
+.navbar-brand {
+    font-weight: bold;
+    font-size: 24px;
+    margin-right: 0;
+}
+
+.nav-icons a {
+    margin-left: 10px;
+    color: var(--background-dark);
+    font-size: 18px;
+}
+
+.nav-icons a span {
+    position: relative;
+    top: -18px;
+    left: -5px;
+    background-color: var(--font-secondary);
+    padding: 2px 5px 2px 5px;
+    margin-bottom: -100px;
+    color: var(--text-white);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.primary-hover:hover {
+    color: var(--font-secondary) !important;
+}
+
+/* ============== Banner side  =========*/
+.banner {
+    background: url('../images/banner-img-1.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--text-white);
+    padding: 220px 0px 220px 0px;
+}
+
+.btn {
+    border-radius: 20px;
+    padding: .375rem 20px;
+}
+
+.btn-primary {
+    background-color: var(--text-white);
+    color: #333;
+    border: none;
+}
+
+/* Hover effect */
+.btn:hover {
+    color: var(--text-white) !important;
+    background-color: var(--font-secondary) !important;
+    border-color: var(--font-primary);
+}
+
+/* ============== new collection side  =========*/
+.new-collection h2,
+.special-selection h2,
+.blog-section h2,
+.popular h2,
+.newsletter h2 {
+    color: var(--font-primary);
+}
+
+.collection-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collection-title h2 {
+    margin: 0;
+}
+
+.new {
+    color: var(--font-secondary);
+    font-size: 50px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.filters {
+    justify-content: space-between;
+}
+
+.filters button {
+    margin-bottom: 10px;
+}
+
+.btn-outline-primary {
+    color: var(--font-primary);
+    border-color: var(--font-primary);
+}
+
+.btn-active {
+    color: var(--text-white) !important;
+    background-color: var(--font-secondary) !important;
+    border-color: var(--font-primary);
+}
+
+/* ============== Product card side  =========*/
+
+.product-card-label-favorite::before {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    background: none;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f004";
+    color: var(--font-secondary);
+    font-size: 25px;
+}
+
+.product-card-label::before {
+    background-color: var(--font-secondary);
+    border-radius: 60%;
+    font-size: 12px;
+    padding: 8px 5px 8px 5px;
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    content: "Sale";
+    color: var(--text-white);
+    transition: background-color 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+}
+
+.product-card-label:hover~.product-card-label::before,
+.product-card-label:hover::before,
+.product-card-label.selected::before {
+    background: none;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f004";
+    color: var(--font-secondary);
+    font-size: 25px;
+
+}
+
+/* Star Rating Container */
+.star-rating {
+    display: inline-flex;
+    font-size: 1.5rem;
+    color: var(--border-color);
+    cursor: pointer;
+}
+
+/* Individual Star */
+.star::before {
+    content: "★";
+    color: var(--border-color);
+}
+
+.star-active::before {
+    content: "★";
+    color: var(--star-rating);
+}
+
+/* Hover and selected state */
+.star:hover~.star::before,
+.star:hover::before,
+.star.selected::before {
+    color: var(--star-rating);
+}
+
+/* Selected stars for a persistent rating */
+.star.selected~.star::before {
+    color: var(--border-color);
+}
+
+.product-card {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.product-card p {
+    font-weight: bold;
+}
+
+/* ============== sale Banner side  =========*/
+.sale-banner {
+    background: url('../images/offer_img.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--text-white);
+    padding: 180px 0px 180px 0px;
+}
+
+.blog-post p {
+    font-size: 13px;
+    color: var(--font-primary);
+}
+
+/* ============== newsletter side  =========*/
+.newsletter {
+    background-color: var(--background-light);
+}
+
+.newsletter .container p {
+    font-size: 13px;
+    color: var(--font-primary);
+}
+
+.newsletter .container input {
+    border-radius: 15px 0px 0px 15px;
+    padding: 5px 5px 5px 60px;
+    border: 1px solid var(--font-primary);
+}
+
+.newsletter .container button {
+    border-radius: 0px 15px 15px 0px;
+    margin-left: -10px;
+}
+
+/* ============== popular side  =========*/
+.popular h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-list .product-item {
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.product-list .product-item img {
+    max-width: 80px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.product-list .product-item p {
+    font-size: 14px;
+    color: var(--font-primary);
+}
+
+/* ============== footer side  =========*/
+.about-us p,
+.contact-us p {
+    font-size: 13px;
+    color: var(--border-color);
+}
+
+.link .navbar-nav .nav-item .nav-link {
+    padding: .3rem 0rem;
+    color: var(--border-color);
+    font-size: 13px;
+}
+
+.follow-us .social-links a {
+    padding: .3rem 0rem;
+    color: var(--border-color);
+    font-size: 20px;
+    margin-right: 10px;
+}
